@@ -33,7 +33,7 @@ def comicExtra():
 		os.makedirs('comicDownloads'+os.sep)
 	os.chdir('comicDownloads'+os.sep)
 	for comicName in library:
-		incompleteUrl="https://www.comicextra.com/comic/"+comicName+"/"
+		incompleteUrl="https://ww1.comicextra.com/comic/"+comicName+"/"
 		tryAgain=0
 		while tryAgain==0:
 			try:
@@ -60,7 +60,7 @@ def comicExtra():
 			for td in tr.findAll('td'):
 				for a in td.findAll('a'):
 					middleLink=a['href'].split(comicName+"/")[1]
-					ChapterName=middleLink.split("chapter-")[1]
+					ChapterName=middleLink.split("issue-")[1]
 					try:
 						if float(ChapterName) >= float(books['comicExtra'][comicName]):
 							chapterNames.append(ChapterName)
