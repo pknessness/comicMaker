@@ -35,12 +35,12 @@ def readComicOnlineTo():
 	proxyNumber=0
 	proxyCount=0
 	while proxyCount<5:
-		proxyList=rotateProxy.createProxyList("https://readcomiconline.to/Comic/")
+		proxyList=rotateProxy.createProxyList("https://readcomiconline.li/Comic/")
 		# proxyList=rotateProxy.createProxyList("https://google.com/")
 		proxyCount=len(proxyList)
 	
 	for comicName in library:
-		incompleteUrl="https://readcomiconline.to/Comic/"+comicName+"/"
+		incompleteUrl="https://readcomiconline.li/Comic/"+comicName+"/"
 		tryAgain=0
 		while tryAgain == 0:
 			try:
